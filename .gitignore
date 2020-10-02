@@ -1,0 +1,11 @@
+input/ignoreWarnings.txt
+input/ImplementationGuide-practitioner.ar.json
+input/extensions/StructureDefinition-apellidoMaterno.json
+input/extensions/StructureDefinition-apellidoPaterno.json
+input/extensions/StructureDefinition-EtniaAr.json
+input/extensions/StructureDefinition-idGenero.json
+input/extensions/StructureDefinition-lugarNacimiento.json
+input/includes/menu.xml
+input/profiles/StructureDefinition-profesional-argentino.json
+SUSHI-GENERATED-FILES.md
+ig.ini
