@@ -1,0 +1,24 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "EtniasValueSet",
+  "id": "etnias-argentinas-value-set",
+  "title": "Etnias Argentinas Value Set",
+  "description": "Codigo que describe las etnias argentinas desde la edición argentina de SNOMED-CT.",
+  "version": "0.1.0",
+  "url": "http://fhir.msal.gob.ar/ValueSet/etnias-argentinas-value-set",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct/11000221109",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "372148003"
+          }
+        ]
+      }
+    ]
+  }
+}
