@@ -35,3 +35,15 @@ Id: etnias-argentinas-value-set
 Title: "Etnias Argentinas Value Set"
 Description:  "Codigo que describe las etnias argentinas desde la edición argentina de SNOMED-CT."
 * codes from system SCTAr where concept is-a #372148003 
+
+Extension: MatriculaHabilitada
+Id: matriculaHabilitada
+Title: "Estado de habiltiacion de la matricula profesional en una jurisdccion"
+Description: "Matricula Habilitada o No"
+* value[x] only boolean
+
+Extension: FechaModificacionMatricula
+Id: fechaModificacionMatricula
+Title: "Fecha de la ultima modificacion de una matricula habilitante para el profesional"
+Description: "Fecha de ultima modificacion de la matricula profesional"
+* value[x] only date

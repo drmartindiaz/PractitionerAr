@@ -6,19 +6,30 @@ Id:         profesional-argentino
 Title:      "Profesional Argentina"
 Description: "Profesional para la Red de Salud Digital de la República Argentina."
 
+* ^language = #Español
+* ^version = "0.3.0"
+* ^experimental = true
+* ^date = "2020-10-04"
+* ^publisher = "DNGISS msal.gov.ar"
+
 //slicing de IDENTIFIER
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type.coding.code"
 * identifier ^slicing.rules = #open
     //DNI
     * identifier contains DNI 1..1 MS
-    * identifier[DNI].use = http://hl7.org/fhir/identifier-use#official 
-    * identifier[DNI].system = "http://www.renaper.gob.ar/dni" 
+    * identifier[DNI].use = http://hl7.org/fhir/identifier-use#official (exactly)
+    * identifier[DNI].system = "http://www.renaper.gob.ar/dni" (exactly)
+    * identifier[DNI].system ^short = "RENAPER"
+    * identifier[DNI].system ^definition = "Registro Nacional de las Personas de Argentina"
+    * identifier[DNI].value 1..1 MS
+    * identifier[DNI].assigner.display 1..1
+    * identifier[DNI].assigner.display = "RENAPER" (exactly)
     * identifier[DNI].type = IDType#NI 
-    * identifier[DNI].value MS 
+
     //REFEPSid
     * identifier contains REFEPSid 1..1 MS
-    * identifier[REFEPSid].use = http://hl7.org/fhir/identifier-use#usual
+    * identifier[REFEPSid].use = http://hl7.org/fhir/identifier-use#usual (exactly)
     * identifier[REFEPSid].system = "https://sisa.msal.gov.ar/REFEPS" 
     * identifier[REFEPSid].system 1..1
     * identifier[REFEPSid].type = IDType#AC
@@ -28,6 +39,8 @@ Description: "Profesional para la Red de Salud Digital de la República Argentin
 * active 1..1
 * name 1..1
 //slicing de NAME
+* name 1..1
+* name ^label = "Nombre y Apellido"
 * name ^slicing.discriminator.type = #value
 * name ^slicing.discriminator.path = "type.coding.code"
 * name ^slicing.rules = #open
@@ -48,3 +61,28 @@ Description: "Profesional para la Red de Salud Digital de la República Argentin
 * communication from http://hl7.org/fhir/ValueSet/languages
 * communication         0..*
 
+* qualification 1..*
+* qualification ^slicing.discriminator[0].type = #value
+* qualification ^slicing.discriminator[0].path = "identifier.system"
+* qualification ^slicing.rules = #open
+* qualification ^comment = "ID REFEPS:7 Dato:Profesión"
+* qualification contains profesion 1..
+* qualification[profesion].extension ^slicing.discriminator[0].type = #value
+* qualification[profesion].extension ^slicing.discriminator[0].path = "url"
+* qualification[profesion].extension ^slicing.rules = #open
+* qualification[profesion].extension contains MatriculaHabilitada 1..1
+* qualification[profesion].identifier 1..1
+* qualification[profesion].identifier.type.text = "PRO" (exactly)
+* qualification[profesion].identifier.system ^comment = "Es el valueset publicado en Simplifier"
+* qualification[profesion].identifier.value 1..
+* qualification[profesion].identifier.assigner.identifier.system = "http://fhir.msal.gov.ar/entidadesCertificantesREFEPS" (exactly)
+* qualification[profesion].code.coding ^short = "Código de profesional REFEPS"
+* qualification[profesion].code.coding ^definition = "Código de profesional en REFEPS, por ejemplo 1=Médico"
+* qualification[profesion].code.coding.system = "http://fhir.msal.gov.ar/ValueSet/Profesiones_REFEPS" (exactly)
+* qualification[profesion].period.extension ^slicing.discriminator[0].type = #value
+* qualification[profesion].period.extension ^slicing.discriminator[0].path = "url"
+* qualification[profesion].period.extension ^slicing.rules = #open
+* qualification[profesion].period.extension contains FechaModificacionMatricula 1..1
+* qualification[profesion].period.start 1..
+* qualification contains especialidad 1..*
+* qualification[especialidad].identifier.type.text = "ESP" (exactly)
