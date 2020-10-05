@@ -62,27 +62,32 @@ Description: "Profesional para la Red de Salud Digital de la República Argentin
 * communication         0..*
 
 * qualification 1..*
+//slicing de qualification
 * qualification ^slicing.discriminator[0].type = #value
 * qualification ^slicing.discriminator[0].path = "identifier.system"
 * qualification ^slicing.rules = #open
-* qualification ^comment = "ID REFEPS:7 Dato:Profesión"
-* qualification contains profesion 1..
-* qualification[profesion].extension ^slicing.discriminator[0].type = #value
-* qualification[profesion].extension ^slicing.discriminator[0].path = "url"
-* qualification[profesion].extension ^slicing.rules = #open
-* qualification[profesion].extension contains MatriculaHabilitada 1..1
-* qualification[profesion].identifier 1..1
-* qualification[profesion].identifier.type.text = "PRO" (exactly)
-* qualification[profesion].identifier.system ^comment = "Es el valueset publicado en Simplifier"
-* qualification[profesion].identifier.value 1..
-* qualification[profesion].identifier.assigner.identifier.system = "http://fhir.msal.gov.ar/entidadesCertificantesREFEPS" (exactly)
-* qualification[profesion].code.coding ^short = "Código de profesional REFEPS"
-* qualification[profesion].code.coding ^definition = "Código de profesional en REFEPS, por ejemplo 1=Médico"
-* qualification[profesion].code.coding.system = "http://fhir.msal.gov.ar/ValueSet/Profesiones_REFEPS" (exactly)
-* qualification[profesion].period.extension ^slicing.discriminator[0].type = #value
-* qualification[profesion].period.extension ^slicing.discriminator[0].path = "url"
-* qualification[profesion].period.extension ^slicing.rules = #open
-* qualification[profesion].period.extension contains FechaModificacionMatricula 1..1
-* qualification[profesion].period.start 1..
-* qualification contains especialidad 1..*
-* qualification[especialidad].identifier.type.text = "ESP" (exactly)
+//profesion
+    * qualification contains profesion 1..
+    * qualification[profesion].extension ^slicing.discriminator[0].type = #value
+    * qualification[profesion].extension ^slicing.discriminator[0].path = "url"
+    * qualification[profesion].extension ^slicing.rules = #open
+    * qualification[profesion].extension contains MatriculaHabilitada 1..1
+    * qualification[profesion].identifier 1..1
+    * qualification[profesion].identifier.use = http://hl7.org/fhir/identifier-use#official
+    * qualification[profesion].identifier.type.text = "PRO" (exactly)
+    * qualification[profesion].identifier.system ^comment = "Es el valueset publicado en Simplifier"
+    * qualification[profesion].identifier.value 1..
+    * qualification[profesion].identifier.assigner.identifier.system = "http://fhir.msal.gov.ar/entidadesCertificantesREFEPS" (exactly)
+    * qualification[profesion].code.coding ^short = "Código de profesional REFEPS"
+    * qualification[profesion].code.coding ^definition = "Código de profesional en REFEPS, por ejemplo 1=Médico"
+    * qualification[profesion].code.coding.system = "http://fhir.msal.gov.ar/ValueSet/Profesiones_REFEPS" (exactly)
+    * qualification[profesion].period.extension ^slicing.discriminator[0].type = #value
+    * qualification[profesion].period.extension ^slicing.discriminator[0].path = "url"
+    * qualification[profesion].period.extension ^slicing.rules = #open
+    * qualification[profesion].period.extension contains FechaModificacionMatricula 1..1
+    * qualification[profesion].period.start 1..
+    //slicing Especialidad
+    * qualification contains especialidad 1..*
+    * qualification[especialidad].identifier.type.text = "ESP" (exactly)
+    * qualification[especialidad].identifier.use = http://hl7.org/fhir/identifier-use#official
+    * qualification[especialidad].identifier.assigner.identifier.system = "http://fhir.msal.gov.ar/entidadesCertificantesREFEPS" (exactly)
