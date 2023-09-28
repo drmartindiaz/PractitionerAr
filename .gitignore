@@ -1,0 +1,14 @@
+input-cache
+output
+temp
+fsh-generated
+template
+20220429 - Receta Digital Interoperable.pptx
+input.zip
+Secuencia.drawio
+input/fsh/*.old
+input/fsh/examples/*.old
+input/fsh/*.txt
+input.zip
+*.pdf
+*.sql
