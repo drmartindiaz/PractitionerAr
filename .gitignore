@@ -9,3 +9,11 @@ input/includes/menu.xml
 input/profiles/StructureDefinition-profesional-argentino.json
 SUSHI-GENERATED-FILES.md
 ig.ini
+temp
+template
+output
+input-cache
+fsh-generated
+*.sh
+*.bat
+*.pdf

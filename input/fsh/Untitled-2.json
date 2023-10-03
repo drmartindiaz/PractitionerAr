@@ -1,0 +1,160 @@
+"{
+    ""resourceType"": ""Bundle"",
+    ""id"": ""74c29515-44cb-4c0c-ba74-263e6232e60f"",
+    ""meta"": {
+        ""lastUpdated"": ""2023-06-05T15:55:18.381-03:00""
+    },
+    ""type"": ""searchset"",
+    ""total"": 1,
+    ""link"": [
+        {
+            ""relation"": ""self"",
+            ""url"": ""http://practitioner-dev-bus-fhir.apps.ocp4.minsal.devqa/fhir/Practitioner?identifier=https%3A%2F%2Fsisa.msal.gov.ar%2FREFEPS%7C541032332323""
+        }
+    ],
+    ""entry"": [
+        {
+            ""fullUrl"": ""http://practitioner-dev-bus-fhir.apps.ocp4.minsal.devqa/fhir/Practitioner/10021640"",
+            ""resource"": {
+                ""resourceType"": ""Practitioner"",
+                ""id"": ""10021640"",
+                ""identifier"": [
+                    {
+                        ""use"": ""usual"",
+                        ""type"": {
+                            ""coding"": [
+                                {
+                                    ""code"": ""NI""
+                                }
+                            ]
+                        },
+                        ""system"": ""https://sisa.msal.gov.ar/REFEPS"",
+                        ""value"": ""541032332323""
+                    },
+                    {
+                        ""use"": ""official"",
+                        ""system"": ""https://www.renaper.org.ar/dni"",
+                        ""value"": ""32332323""
+                    }
+                ],
+                ""active"": true,
+                ""name"": [
+                    {
+                        ""use"": ""official"",
+                        ""text"": ""Nimfa Lozano"",
+                        ""family"": ""Lozano"",
+                        ""given"": [
+                            ""Nimfa""
+                        ]
+                    }
+                ],
+                ""telecom"": [
+                    {
+                        ""system"": ""email"",
+                        ""value"": ""soporte@sisa.msal.gov.ar"",
+                        ""use"": ""work"",
+                        ""rank"": 1
+                    },
+                    {
+                        ""system"": ""email"",
+                        ""value"": ""soporte@sisa.msal.gov.ar"",
+                        ""use"": ""work"",
+                        ""rank"": 2
+                    }
+                ],
+                ""gender"": ""female"",
+                ""birthDate"": ""1986-09-15"",
+                ""qualification"": [
+                    {
+                        ""identifier"": [
+                            {
+                                ""use"": ""official"",
+                                ""type"": {
+                                    ""text"": ""PRO""
+                                },
+                                ""system"": ""https://sisa.msal.gov.ar/REFEPS"",
+                                ""value"": ""515"",
+                                ""assigner"": {
+                                    ""identifier"": {
+                                        ""system"": ""http://fhir.msal.gov.ar/entidadesCertificantesREFEPS""
+                                    }
+                                }
+                            }
+                        ],
+                        ""code"": {
+                            ""coding"": [
+                                {
+                                    ""system"": ""http://fhir.msal.gov.ar/ValueSet/Profesiones_REFEPS"",
+                                    ""code"": ""10021640"",
+                                    ""display"": ""Técnico en anestesia""
+                                }
+                            ]
+                        },
+                        ""period"": {
+                            ""start"": ""2016-12-16T00:00:00-03:00""
+                        }
+                    },
+                    {
+                        ""identifier"": [
+                            {
+                                ""use"": ""official"",
+                                ""type"": {
+                                    ""text"": ""PRO""
+                                },
+                                ""system"": ""https://sisa.msal.gov.ar/REFEPS"",
+                                ""value"": ""587"",
+                                ""assigner"": {
+                                    ""identifier"": {
+                                        ""system"": ""http://fhir.msal.gov.ar/entidadesCertificantesREFEPS""
+                                    }
+                                }
+                            }
+                        ],
+                        ""code"": {
+                            ""coding"": [
+                                {
+                                    ""system"": ""http://fhir.msal.gov.ar/ValueSet/Profesiones_REFEPS"",
+                                    ""code"": ""10021640"",
+                                    ""display"": ""Técnico en anestesia""
+                                }
+                            ]
+                        },
+                        ""period"": {
+                            ""start"": ""2007-02-20T00:00:00-03:00""
+                        }
+                    },
+                    {
+                        ""identifier"": [
+                            {
+                                ""use"": ""official"",
+                                ""type"": {
+                                    ""text"": ""PRO""
+                                },
+                                ""system"": ""https://sisa.msal.gov.ar/REFEPS"",
+                                ""value"": ""2248"",
+                                ""assigner"": {
+                                    ""identifier"": {
+                                        ""system"": ""http://fhir.msal.gov.ar/entidadesCertificantesREFEPS""
+                                    }
+                                }
+                            }
+                        ],
+                        ""code"": {
+                            ""coding"": [
+                                {
+                                    ""system"": ""http://fhir.msal.gov.ar/ValueSet/Profesiones_REFEPS"",
+                                    ""code"": ""10021640"",
+                                    ""display"": ""Técnico en anestesia""
+                                }
+                            ]
+                        },
+                        ""period"": {
+                            ""start"": ""2010-11-23T00:00:00-03:00""
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}}"
+
