@@ -58,29 +58,23 @@ Description: "Profesional para la Red de Salud Digital de la República Argentin
 
 //profesion
 * qualification contains profesion 1..*
-// * qualification[profesion].extension ^slicing.discriminator[0].type = #value
-// * qualification[profesion].extension ^slicing.discriminator[0].path = "url"
-// * qualification[profesion].extension ^slicing.rules = #open
 * qualification[profesion].extension contains matriculaHabilitada named MatriculaHabilitada 1..1
 * qualification[profesion].identifier 1..1
-//* qualification[profesion].identifier.use = http://hl7.org/fhir/identifier-use#official
 * qualification[profesion].identifier.type.text = "Matrícula Profesional" (exactly)
 * qualification[profesion].identifier.type = #JHN
 * qualification[profesion].identifier.system 1..1 
+* qualification[profesion].identifier.system ^short = "URI compuesta por Profesion-Jurisdicción-Emisor"
 * qualification[profesion].identifier.value 1..1
-//* qualification[profesion].issuer.identifier.system = "https://sisa.msal.gov.ar/REFEPS/profesiones" //Valor fijo de la URI del valueset
+* qualification[profesion].identifier. ^short = "Número de matrícula propiamente dicho"
+//* qualification[profesion].issuer.identifier.system = "https://sisa.msal.gov.ar/REFEPS/profesiones" 
 * qualification[profesion].code from ProfesionesVS
 * qualification[profesion].code.coding ^short = "Código de profesion REFEPS"
-* qualification[profesion].code.coding ^definition = "Código de profesion en REFEPS, por ejemplo 1=Médico"
-// * qualification[profesion].period.extension ^slicing.discriminator[0].type = #value
-// * qualification[profesion].period.extension ^slicing.discriminator[0].path = "url"
-// * qualification[profesion].period.extension ^slicing.rules = #open
 * qualification[profesion].period.extension contains fechaModificacionMatricula named FechaModificacionMatricula 1..1
 * qualification[profesion].period.start 1..1
 * qualification[profesion].issuer only Reference(datosMatriculador)
 
 //slicing Especialidad
-* qualification contains especialidad 1..*
+* qualification contains especialidad 0..*
 * qualification[especialidad].identifier.type.text = "ESP" (exactly)
 * qualification[especialidad].identifier.use = http://hl7.org/fhir/identifier-use#official
 * qualification[especialidad].identifier.assigner.identifier.system = "http://fhir.msal.gov.ar/entidadesCertificantesREFEPS" (exactly)

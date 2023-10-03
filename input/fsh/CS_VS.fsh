@@ -543,3 +543,40 @@ Description:  "Listado de Entidades certificantes de matriculas para REFEPS Code
 * #75900002198203 "Colegio de FARMACÉUTICOS, de Tucumán"
 * #75900002198204 "Colegio de ODONTÓLOGOS, de Tucumán"
 * #75900002198206 "Colegio de PSICÓLOGOS, de Tucumán"
+
+CodeSystem: ProvinciasREFEPSCS
+Id: rovinciasREFEPSCS
+Title: "Provincias de la República Argentina Codificadas"
+Description: "Listado de provincias Argentinas"
+* insert RuleSetMeta
+* #1 "CABA"
+* #2 "Buenos Aires"
+* #3 "Catamarca"
+* #4 "Chaco"
+* #5 "Chubut"
+* #6 "Córdoba"
+* #7 "Corrientes"
+* #8 "Entre Ríos"
+* #9 "Formosa"
+* #10 "Jujuy"
+* #11 "La Pampa"
+* #12 "La Rioja"
+* #13 "Mendoza"
+* #14 "Misiones"
+* #15 "Neuquén"
+* #16 "Río Negro"
+* #17 "Salta"
+* #18 "San Juan"
+* #19 "San Luis"
+* #20 "Santa Cruz"
+* #21 "Santa Fe"
+* #22 "Santiago del Estero"
+* #23 "Tierra del Fuego"
+* #24 "Tucumán"
+
+ValueSet: ProvinciasREFEPSVS
+Id: provinciasREFEPSVS
+Title: "Conjunto de valores posibles para provincias argentinas"
+Description: "Conjunto de valores posibles para provincias argentinas"
+* insert RuleSetMeta
+* codes from system ProfesionesCS
