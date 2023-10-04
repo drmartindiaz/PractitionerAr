@@ -9,4 +9,4 @@ Description: "Entidad de matriculacion de un profesional en REFEPS referenciado 
 * identifier.value ^short = "Set de valores de codigos REFES pertenecientes a entidades que dan matrículas profesionales"
 * identifier.system 1..1
 * identifier.system = "https://sisa.msal.gob.ar/REFES"
-* address.state 
+* address.state from ProvinciasVS

@@ -67,6 +67,7 @@ Description: "Profesional para la Red de Salud Digital de la República Argentin
 * qualification[profesion].identifier.type.text = "Matrícula Profesional" (exactly)
 * qualification[profesion].identifier.type = #JHN
 * qualification[profesion].identifier.system 1..1 
+* qualification[profesion].identifier.system ^short = "Es un numero conformado por tipoProfesional, la jurisdiccion y el colegio"
 * qualification[profesion].identifier.value 1..1
 //* qualification[profesion].issuer.identifier.system = "https://sisa.msal.gov.ar/REFEPS/profesiones" //Valor fijo de la URI del valueset
 * qualification[profesion].code from ProfesionesVS
@@ -80,7 +81,7 @@ Description: "Profesional para la Red de Salud Digital de la República Argentin
 * qualification[profesion].issuer only Reference(datosMatriculador)
 
 //slicing Especialidad
-* qualification contains especialidad 1..*
+* qualification contains especialidad 0..*
 * qualification[especialidad].identifier.type.text = "ESP" (exactly)
 * qualification[especialidad].identifier.use = http://hl7.org/fhir/identifier-use#official
 * qualification[especialidad].identifier.assigner.identifier.system = "http://fhir.msal.gov.ar/entidadesCertificantesREFEPS" (exactly)
