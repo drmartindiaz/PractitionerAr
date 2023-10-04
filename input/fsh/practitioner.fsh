@@ -29,7 +29,7 @@ Description: "Profesional para la Red de Salud Digital de la República Argentin
 * identifier[LSF].system 1..1
 * identifier[LSF].type = IDType#MD
 * identifier[LSF].value 1..1 
-* identifier[LSF].period.start 1..1 
+//* identifier[LSF].period.start 1..1 //Es por matricula 
 
 * active 1..1
 * name 1..1
