@@ -76,9 +76,15 @@ Description: "Profesional para la Red de Salud Digital de la República Argentin
 // * qualification[profesion].period.extension ^slicing.discriminator[0].type = #value
 // * qualification[profesion].period.extension ^slicing.discriminator[0].path = "url"
 // * qualification[profesion].period.extension ^slicing.rules = #open
-* qualification[profesion].period.extension contains fechaModificacionMatricula named FechaModificacionMatricula 1..1
+* qualification[profesion].period.extension contains fechaModificacionMatricula named FechaModificacionMatricula 0..1
 * qualification[profesion].period.start 1..1
-* qualification[profesion].issuer only Reference(datosMatriculador)
+//* qualification[profesion].issuer only Reference(datosMatriculador)
+* qualification[profesion].issuer 1..1
+* qualification[profesion].issuer.identifier 1..1
+* qualification[profesion].issuer.identifier.system 1..1
+* qualification[profesion].issuer.identifier.value 1..1
+* qualification[profesion].issuer.identifier.system = "https://sisa.msal.gov.ar/REFES"
+
 
 //slicing Especialidad
 * qualification contains especialidad 0..*
