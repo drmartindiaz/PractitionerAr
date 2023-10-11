@@ -12,3 +12,7 @@ input/fsh/*.txt
 input.zip
 *.pdf
 *.sql
+desktop.ini
+input/fsh/desktop.ini
+input/desktop.ini
+input/fsh/examples/desktop.ini
