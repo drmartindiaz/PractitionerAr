@@ -72,6 +72,7 @@ Description: "Profesional para la Red de Salud Digital de la República Argentin
 //* qualification[profesion].issuer.identifier.system = "https://sisa.msal.gov.ar/REFEPS/profesiones" //Valor fijo de la URI del valueset
 * qualification[profesion].code from ProfesionesVS
 * qualification[profesion].code.coding ^short = "Código de profesion REFEPS"
+//Hacer un slicing de code para representar las N especialidades
 * qualification[profesion].code.coding ^definition = "Código de profesion en REFEPS, por ejemplo 1=Médico"
 // * qualification[profesion].period.extension ^slicing.discriminator[0].type = #value
 // * qualification[profesion].period.extension ^slicing.discriminator[0].path = "url"
@@ -79,12 +80,13 @@ Description: "Profesional para la Red de Salud Digital de la República Argentin
 * qualification[profesion].period.extension contains fechaModificacionMatricula named FechaModificacionMatricula 0..1
 * qualification[profesion].period.start 1..1
 //* qualification[profesion].issuer only Reference(datosMatriculador)
+//Jurisdiccion en extension ad hoc
 * qualification[profesion].issuer 1..1
 * qualification[profesion].issuer.identifier 1..1
 * qualification[profesion].issuer.identifier.system 1..1
 * qualification[profesion].issuer.identifier.value 1..1
 * qualification[profesion].issuer.identifier.system = "https://sisa.msal.gov.ar/REFES"
-
+* qualification[profesion].issuer.display 1..1
 
 //slicing Especialidad
 * qualification contains especialidad 0..*

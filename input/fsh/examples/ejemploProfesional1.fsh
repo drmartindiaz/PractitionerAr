@@ -18,7 +18,7 @@ Description: "Ejemplo de profesional argentino con una sola profesion en REFEPS"
 * qualification[profesion].extension.valueBoolean = true
 * qualification[profesion].identifier.system = "https://sisa.msal.gov.ar/REFEPS/15-2-10006441714000"
 * qualification[profesion].identifier.value = "119217"
-* qualification[profesion].code = #35
+* qualification[profesion].code = #15
 * qualification[profesion].period.start = "2014-10-06T00:00:00+00:00"
 //* qualification[profesion].issuer = Reference(Matriculador1)
 * qualification[profesion].issuer.identifier.system = "https://sisa.msal.gov.ar/REFES"
