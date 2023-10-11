@@ -1,4 +1,4 @@
-Extension:  IdentidadGenero
+/*Extension:  IdentidadGenero
 Id: idGenero
 Title: "Identidad de Género"
 Description: "Género con el cual el paciente se siente identificado."
@@ -30,14 +30,29 @@ Title: "Apellido de la madre de paciente"
 Description: "Apellido de la madre de paciente"
 * value[x] only string  
 
+*/
+RuleSet: ExtensionContext(path)
+* ^context[+].type = #element
+* ^context[=].expression = "{path}"
+
 Extension: MatriculaHabilitada
 Id: matriculaHabilitada
 Title: "Estado de habilitacion de la matricula profesional en una jurisdccion"
 Description: "Matricula Habilitada o No"
 * value[x] only boolean
+* insert ExtensionContext(MedicationRequest)
 
 Extension: FechaModificacionMatricula
 Id: fechaModificacionMatricula
 Title: "Fecha de la ultima modificacion de una matricula habilitante para el profesional"
 Description: "Fecha de ultima modificacion de la matricula profesional"
 * value[x] only date
+* insert ExtensionContext(MedicationRequest)
+
+Extension: JurisdMatricula
+Id: jurisdMatricula
+Title: "Jurisdicción Matricula de profesión"
+Description: "Jurisdicción Matricula de profesión"
+* value[x] only CodeableConcept
+* value[x] from ProvinciasREFEPSVS
+* insert ExtensionContext(MedicationRequest)

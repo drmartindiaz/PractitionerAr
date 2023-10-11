@@ -29,7 +29,7 @@ Description: "Profesional para la Red de Salud Digital de la República Argentin
 * identifier[LSF].system 1..1
 * identifier[LSF].type = IDType#MD
 * identifier[LSF].value 1..1 
-* identifier[LSF].period.start 1..1 
+//* identifier[LSF].period.start 1..1 //Es por matricula 
 
 * active 1..1
 * name 1..1
@@ -59,19 +59,26 @@ Description: "Profesional para la Red de Salud Digital de la República Argentin
 //profesion
 * qualification contains profesion 1..*
 * qualification[profesion].extension contains matriculaHabilitada named MatriculaHabilitada 1..1
+* qualification[profesion].extension contains jurisdMatricula named JurisdiccionMatricula 1..1
 * qualification[profesion].identifier 1..1
 * qualification[profesion].identifier.type.text = "Matrícula Profesional" (exactly)
 * qualification[profesion].identifier.type = #JHN
 * qualification[profesion].identifier.system 1..1 
-* qualification[profesion].identifier.system ^short = "URI compuesta por Profesion-Jurisdicción-Emisor"
+* qualification[profesion].identifier.system ^short = "Es un numero conformado por tipoProfesional, la jurisdiccion y el colegio"
 * qualification[profesion].identifier.value 1..1
-* qualification[profesion].identifier. ^short = "Número de matrícula propiamente dicho"
-//* qualification[profesion].issuer.identifier.system = "https://sisa.msal.gov.ar/REFEPS/profesiones" 
 * qualification[profesion].code from ProfesionesVS
 * qualification[profesion].code.coding ^short = "Código de profesion REFEPS"
-* qualification[profesion].period.extension contains fechaModificacionMatricula named FechaModificacionMatricula 1..1
+//Hacer un slicing de code para representar las N especialidades
+* qualification[profesion].code.coding ^definition = "Código de profesion en REFEPS, por ejemplo 1=Médico"
+* qualification[profesion].period.extension contains fechaModificacionMatricula named FechaModificacionMatricula 0..1
 * qualification[profesion].period.start 1..1
-* qualification[profesion].issuer only Reference(datosMatriculador)
+//Jurisdiccion en extension ad hoc
+* qualification[profesion].issuer 1..1
+* qualification[profesion].issuer.identifier 1..1
+* qualification[profesion].issuer.identifier.system 1..1
+* qualification[profesion].issuer.identifier.value 1..1
+* qualification[profesion].issuer.identifier.system = "https://sisa.msal.gov.ar/REFES"
+* qualification[profesion].issuer.display 1..1
 
 //slicing Especialidad
 * qualification contains especialidad 0..*
