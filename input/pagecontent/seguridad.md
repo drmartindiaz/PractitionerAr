@@ -1,0 +1,1 @@
+Para RDIar se utilizarán los mecanismos de seguridad que ya se encuentran disponibles en la RNSD para otros servicios de intercambio de información sanitaria [FHIR CORE-AR Seguridad](https://bus.msal.gob.ar/fhir/ar/core/site/seguridad.html)

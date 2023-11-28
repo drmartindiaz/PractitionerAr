@@ -8,7 +8,7 @@ Description: "Profesional para la Red de Salud Digital de la República Argentin
 
 //slicing de IDENTIFIER
 * identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "type.coding.code"
+* identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
 * identifier 1..*
 //DNI
@@ -52,8 +52,8 @@ Description: "Profesional para la Red de Salud Digital de la República Argentin
 
 * qualification 1..*
 //slicing de qualification
-* qualification ^slicing.discriminator[0].type = #value
-* qualification ^slicing.discriminator[0].path = "identifier.system"
+* qualification ^slicing.discriminator.type = #value
+* qualification ^slicing.discriminator.path = "identifier.system"
 * qualification ^slicing.rules = #open
 
 //profesion
