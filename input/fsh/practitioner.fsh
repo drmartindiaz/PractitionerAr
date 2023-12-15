@@ -1,7 +1,7 @@
 Profile:    PractitionerAr
 Parent:     Practitioner
 Id:         profesional-argentino
-Title:      "Profesional Argentina"
+Title:      "Profesional Sanitario de Argentina"
 Description: "Profesional para la Red de Salud Digital de la República Argentina."
 
 * insert RuleSetMeta
@@ -62,6 +62,7 @@ Description: "Profesional para la Red de Salud Digital de la República Argentin
 // * qualification[profesion].extension ^slicing.discriminator[0].path = "url"
 // * qualification[profesion].extension ^slicing.rules = #open
 * qualification[profesion].extension contains matriculaHabilitada named MatriculaHabilitada 1..1
+* qualification[profesion].extension contains jurisdMatricula named JurisdMatricula 1..1
 * qualification[profesion].identifier 1..1
 //* qualification[profesion].identifier.use = http://hl7.org/fhir/identifier-use#official
 * qualification[profesion].identifier.type.text = "Matrícula Profesional" (exactly)

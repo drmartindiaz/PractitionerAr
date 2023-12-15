@@ -1,9 +1,9 @@
-Extension:  IdentidadGenero
+/*Extension:  IdentidadGenero
 Id: idGenero
 Title: "Identidad de Género"
 Description: "Género con el cual el paciente se siente identificado."
 * value[x] only CodeableConcept
-* valueCodeableConcept from http://hl7.org/fhir/ValueSet/gender-identity (extensible)
+* valueCodeableConcept from http://hl7.org/fhir/ValueSet/gender-identity (extensible)*/
 
 // Extension:  Etnia
 // Id: EtniaAr
@@ -12,11 +12,11 @@ Description: "Género con el cual el paciente se siente identificado."
 // * value[x] only CodeableConcept
 // * valueCodeableConcept from EtniasValueSet (extensible)
 
-Extension: LugarNacimiento
+/*Extension: LugarNacimiento
 Id: lugarNacimiento
 Title: "Lugar de nacimiento"
 Description: "Lugar de nacimiento. Tipo de dato dirección. Pueden completarse sólo los campos necesarios, por ejemplo sólo el país o país y provincia."
-* value[x] only Address
+* value[x] only Address*/
 
 Extension: ApellidoPaterno
 Id: apellidoPaterno
@@ -41,3 +41,10 @@ Id: fechaModificacionMatricula
 Title: "Fecha de la ultima modificacion de una matricula habilitante para el profesional"
 Description: "Fecha de ultima modificacion de la matricula profesional"
 * value[x] only date
+
+Extension: JurisdMatricula
+Id: jurisdMatricula
+Title: "Jurisdicción de la Matricula"
+Description: "Jurisdicción de la matrícula del profesional"
+* value[x] only CodeableConcept 
+* valueCodeableConcept from ProvinciasVS 

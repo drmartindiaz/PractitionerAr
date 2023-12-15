@@ -1,7 +1,7 @@
 Logical: Profesional
 Parent: Base
 Id: Profesional
-Title: "Profesional de la SAlud"
+Title: "Profesional de la Salud"
 Description: "Profesional actuante en un episodio sanitario registrado en REFEPS"
 * insert RuleSetMeta
 * DocumentoIdentidad 1..1 identifier "Documento Nacional de Identidad del profesional"
