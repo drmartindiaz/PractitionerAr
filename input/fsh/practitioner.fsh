@@ -53,7 +53,7 @@ Description: "Profesional para la Red de Salud Digital de la República Argentin
 * qualification 1..*
 //slicing de qualification
 * qualification ^slicing.discriminator.type = #value
-* qualification ^slicing.discriminator.path = "identifier.system"
+* qualification ^slicing.discriminator.path = "code.coding.system"
 * qualification ^slicing.rules = #open
 
 //profesion
@@ -72,9 +72,11 @@ Description: "Profesional para la Red de Salud Digital de la República Argentin
 * qualification[profesion].identifier.value 1..1
 //* qualification[profesion].issuer.identifier.system = "https://sisa.msal.gov.ar/REFEPS/profesiones" //Valor fijo de la URI del valueset
 * qualification[profesion].code from ProfesionesVS
+* qualification[profesion].code.coding 1..1
 * qualification[profesion].code.coding ^short = "Código de profesion REFEPS"
 //Hacer un slicing de code para representar las N especialidades
 * qualification[profesion].code.coding ^definition = "Código de profesion en REFEPS, por ejemplo 1=Médico"
+* qualification[profesion].code.coding.system = Canonical(profesionesREFEPSCS)
 // * qualification[profesion].period.extension ^slicing.discriminator[0].type = #value
 // * qualification[profesion].period.extension ^slicing.discriminator[0].path = "url"
 // * qualification[profesion].period.extension ^slicing.rules = #open
@@ -94,3 +96,8 @@ Description: "Profesional para la Red de Salud Digital de la República Argentin
 * qualification[especialidad].identifier.type.text = "ESP" (exactly)
 * qualification[especialidad].identifier.use = http://hl7.org/fhir/identifier-use#official
 * qualification[especialidad].identifier.assigner.identifier.system = "http://fhir.msal.gov.ar/entidadesCertificantesREFEPS" (exactly)
+* qualification[especialidad].code from EspecialidadesVS
+* qualification[especialidad].code.coding 1..1
+* qualification[especialidad].code.coding ^short = "Código de especialidad REFEPS"
+* qualification[especialidad].code.coding ^definition = "Código de especialidad en REFEPS, por ejemplo 1=Clínica Médica"
+* qualification[especialidad].code.coding.system = Canonical(especialidadesREFEPSCS)

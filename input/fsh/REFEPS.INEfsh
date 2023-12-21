@@ -1,0 +1,289 @@
+ValueSet:  EspecialidadesVS
+Id: especialidadesREFEPSVS
+Title: "Especialidades posibles para profesional en Argentina"
+Description:  "Listado de especialidades utilizadas en REFEPS"
+* insert RuleSetMeta
+* codes from system EspecialidadesCS
+
+CodeSystem: EspecialidadesCS
+Id: especialidadesREFEPSCS
+Title: "Especialidades definidas en REFEPS"
+Description:  "Listado de especialidades para REFEPS"
+* insert RuleSetMeta
+* ^url = "http://fhir.msal.gob.ar/REFEPS/CodeSystem/especialidadesREFEPS"
+* #1 "Clínica Médica"
+* #2 "Medicina General y/o Medicina de Familia"
+* #3 "Alergia e Inmunología"
+* #4 "Cardiología"
+* #5 "Angiología General y Hemodinamia"
+* #6 "Dermatología"
+* #7 "Endocrinología"
+* #8 "Farmacología Clínica"
+* #9 "Fisiatría (Medicina Física y Rehabilitación)"
+* #10 "Gastroenterología"
+* #11 "Genética Médica"
+* #12 "Geriatría"
+* #13 "Hematología"
+* #14 "Infectología"
+* #15 "Nefrología"
+* #16 "Neumonología"
+* #17 "Neurología"
+* #18 "Nutrición"
+* #19 "Oncología"
+* #20 "Reumatología"
+* #21 "Terapia Intensiva"
+* #22 "Cirugía General"
+* #23 "Cirugía Cardiovascular"
+* #24 "Cirugía de Cabeza y Cuello"
+* #25 "Cirugía de Tórax (Cirugía Torácica)"
+* #26 "Cirugía infantil (Cirugía Pediátrica)"
+* #27 "Cirugía Plástica y Reparadora"
+* #28 "Cirugía Vascular Periférica"
+* #29 "Coloproctología"
+* #30 "Ginecología"
+* #31 "Neurocirugía"
+* #32 "Obstetricia"
+* #33 "Oftalmología"
+* #34 "Ortopedia y Traumatología"
+* #35 "Otorrinolaringología"
+* #36 "Tocoginecología"
+* #37 "Urología"
+* #38 "Pediatría"
+* #39 "Cardiología Infantil"
+* #40 "Endocrinología Infantil"
+* #41 "Gastroenterología Infantil"
+* #42 "Hematología Infantil"
+* #43 "Infectología Infantil"
+* #44 "Nefrología Infantil"
+* #45 "Neonatología"
+* #46 "Neumonología Infantil"
+* #47 "Neurología Infantil"
+* #48 "Oncología Infantil"
+* #49 "Reumatología Infantil"
+* #50 "Terapia Intensiva Infantil"
+* #51 "Psiquiatría"
+* #52 "Psiquiatría Infanto Juvenil"
+* #53 "Anatomía Patológica"
+* #54 "Anestesiología"
+* #55 "Diagnóstico por Imágenes"
+* #56 "Hemoterapia e Inmunohematología"
+* #57 "Medicina del Deporte"
+* #58 "Medicina del Trabajo"
+* #59 "Medicina Legal"
+* #60 "Medicina Nuclear"
+* #61 "Radioterapia o Terapia Radiante"
+* #62 "Toxicología"
+* #63 "Dermatología Pediátrica"
+* #64 "Emergentología"
+* #65 "Especialidad en Anatomía Patológica Bucalmaxilofacial"
+* #66 "Especialidad en Cirugía y Traumatología Bucomaxilofacial"
+* #67 "Especialidad de Endodoncia"
+* #68 "Especialidad de Periodoncia"
+* #69 "Especialidad de Odontopediatría"
+* #70 "Especialidad de Ortodoncia y Ortopedia Maxilar"
+* #71 "Especialización en Diagnóstico por Imágenes Bucomaxilofacial"
+* #72 "Especialidad en Odontología Legal"
+* #73 "Especialidad en Clínica Estomatológica"
+* #74 "Especialidad en Prótesis Dentobucomaxilar"
+* #75 "Enfermería en Salud del Adulto"
+* #76 "Enfermería en Salud del Anciano"
+* #77 "Enfermería en Salud Materno Infantil y del Adolescente"
+* #78 "Enfermería en Salud Mental y Psiquiatría"
+* #79 "Enfermería en la Atención del Paciente Crítico: Neonatal, Pediátrico y Adulto"
+* #80 "Enfermería en Cuidados Paliativos"
+* #81 "Electrofisiología cardíaca"
+* #82 "Ortopedia y Traumatología Infantil"
+* #83 "Hepatología"
+* #84 "Hepatología Pediátrica"
+* #85 "Alergia e inmunología Pediátrica"
+* #86 "Cirugía Cardiovascular Pediátrica"
+* #87 "Salud Pública"
+* #88 "Epidemiología"
+* #89 "Auditoría de Servicios de Salud"
+* #90 "Gestión de Servicios de Salud"
+* #91 "Farmacia hospitalaria"
+* #92 "Farmacia comunitaria"
+* #93 "Esterilización"
+* #94 "Farmacia industrial"
+* #95 "Farmacia sanitaria y legal"
+* #96 "Nutrición y análisis de los alimentos"
+* #97 "Biofarmacia"
+* #98 "Bioquímica clínica"
+* #99 "Toxicología legal y forense"
+* #100 "Bromatología"
+* #101 "Biotecnología"
+* #102 "Bioquímica del medio ambiente"
+* #103 "Nutrición en bioquímica"
+* #104 "Bioquímica industrial"
+* #105 "Gestión de calidad en el laboratorio"
+* #106 "Enfermeria en Rehabilitación"
+* #121 "Odontología (R)"
+* #122 "Psicología (R)"
+* #123 "Enfermería (R)"
+* #124 "Fonoaudiología (R)"
+* #125 "Kinesiología (R)"
+* #126 "Terapia ocupacional (R)"
+* #127 "Enfermería en cuidados críticos (R)"
+* #128 "Salud Mental (R)"
+* #129 "Microbiología (R)"
+* #130 "Inocuidad y seguridad de Alimentos (R)"
+* #131 "Control de Calidad de Medicamentos (R)"
+* #132 "Enfermeria general y familiar (R)"
+* #133 "Enfermeria UTI Pediatrica (R)"
+* #134 "Enfermería UTI Neonatal (R)"
+* #135 "Enfermería Clinico Quirúrgico (R)"
+* #136 "Enfermería UTI Adultos (R)"
+* #137 "Enfermería en Neonatología (R)"
+* #138 "Enfermería en salud familiar y comunitaria (R)"
+* #139 "Emergentología Pediátrica (R)"
+* #140 "Enfermería Comunitaria (R)"
+* #141 "Nutrición y Alimentación Clinica Infanto juven (R)"
+* #142 "Nutrición y Alimentación Clinica del Adulto (R)"
+* #143 "Enfermería en control de Infecciones (R)"
+* #144 "Enfermería Oncologica (R)"
+* #145 "Psicología comunitaria (R)"
+* #146 "Kinesiologia en Respiratorio de Adultos (R)"
+* #147 "Salud Pública Veterinaria (R)"
+* #148 "Psicología Clínica y comunitaria (R)"
+* #149 "Neurocirugía Pediátrica (R)"
+* #150 "Trabajo Social en Salud (R)"
+* #151 "Ingeniería Clinica (R)"
+* #152 "Cirugía Oncológica (R)"
+* #153 "Bioquímica Toxicológica (R)"
+* #154 "Bioquímica y Nutrición (R)"
+* #155 "Citogenética (R)"
+* #156 "Enfermería Pediátrica (R)"
+* #157 "Radiología (R)"
+* #158 "Seguridad y Eficacia de Medicamentos (R)"
+* #159 "Quemados pediátrico (R)"
+* #161 "Hemato-oncología Pediátrica"
+* #162 "Medicina Paliativa"
+* #163 "ADOLESCENCIA (R)"
+* #164 "ANATOMÍA PATOLÓGICA PEDIÁTRICA (R)"
+* #165 "OBSTETRICIA (R)"
+* #166 "OTORRINOLARINGOLOGÍA PEDIÁTRICA (R)"
+* #167 "INTERDISCIPLINARIA DE EDUCACIÓN PARA LA SALUD (R)"
+* #168 "MUSICOTERAPIA (R)"
+* #169 "DIAGNÓSTICO POR IMAGENES PEDIÁTRICO (R)"
+* #170 "ENFERMERÍA EN PERINATOLOGÍA (R)"
+* #171 "INTERDISCIPLINARIA EN CUIDADOS PALIATIVOS (R)"
+* #172 "INTERDISCIPLINARIA EN GERONTOLOGÍA (R)"
+* #173 "INVESTIGACIÓN EN SALUD (R)"
+* #174 "KINESIOLOGÍA EN PEDIATRÍA Y NEONATOLOGÍA (R)"
+* #175 "KINESIOLOGÍA EN REHABILITACIÓN PSICOFÍSICA (R)"
+* #176 "MASTOLOGÍA (R)"
+* #177 "PROCURACIÓN Y TRANSPLANTE DE ÓRGANOS Y TEJIDOS (R)"
+* #178 "PSICOLOGÍA CLÍNICA INFANTO-JUVENIL (R)"
+* #179 "PSICOPEDAGOGÍA (R)"
+* #180 "TRAUMA (R)"
+* #181 "CIRUGÍA GASTROENTEROLÓGICA (R)"
+* #182 "Psicología Clínica"
+* #183 "Salud Mental Comunitaria"
+* #184 "Nutrición en Salud Pública y Comunitaria"
+* #185 "Derecho y Salud (R)"
+* #186 "Arquitectura (R)"
+* #187 "Economía y Administración Hospitalaria (R)"
+
+Profile:    PractitionerAr
+Parent:     Practitioner
+Id:         profesional-argentino
+Title:      "Profesional Sanitario de Argentina"
+Description: "Profesional para la Red de Salud Digital de la República Argentina."
+
+* insert RuleSetMeta
+
+//slicing de IDENTIFIER
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #open
+* identifier 1..*
+//DNI
+* identifier contains DNI 0..1 MS
+* identifier[DNI].use = http://hl7.org/fhir/identifier-use#secondary (exactly)
+* identifier[DNI].system = "http://www.renaper.gob.ar/dni" (exactly)
+* identifier[DNI].system ^short = "RENAPER"
+//* identifier[DNI].system ^definition = "Registro Nacional de las Personas de Argentina"
+* identifier[DNI].value 1..1 
+//* identifier[DNI].assigner.display 1..1
+//* identifier[DNI].assigner.display = "RENAPER" (exactly)
+* identifier[DNI].type = IDType#NI 
+
+//Licencia Sanitaria Federal (LSF)
+* identifier contains LSF 1..1 
+* identifier[LSF].use = http://hl7.org/fhir/identifier-use#official (exactly)
+* identifier[LSF].system = "https://sisa.msal.gov.ar/REFEPS" 
+* identifier[LSF].system 1..1
+* identifier[LSF].type = IDType#MD
+* identifier[LSF].value 1..1 
+//* identifier[LSF].period.start 1..1 //Es por matricula 
+
+* active 1..1
+* name 1..1
+* name ^label = "Nombre y Apellido"
+// * name ^slicing.discriminator.type = #value
+// * name ^slicing.discriminator.path = "type.coding.code"
+// * name ^slicing.rules = #open
+// * name contains official 0..1 MS
+* name.use = http://hl7.org/fhir/identifier-use#official
+// * name.family.extension contains  
+//     ApellidoPaterno named fathers           0..1 and
+//     ApellidoMaterno named mothers           0..1   
+//* name.prefix 0..0
+//* name.suffix 0..0
+
+//* gender from http://hl7.org/fhir/ValueSet/administrative-gender  
+* gender                0..1 MS
+* birthDate             0..1 MS
+//* photo                 0..*
+
+* qualification 1..*
+//slicing de qualification
+* qualification ^slicing.discriminator.type = #value
+* qualification ^slicing.discriminator.path = "code.coding.system"
+* qualification ^slicing.rules = #open
+
+//profesion
+* qualification contains profesion 1..*
+// * qualification[profesion].extension ^slicing.discriminator[0].type = #value
+// * qualification[profesion].extension ^slicing.discriminator[0].path = "url"
+// * qualification[profesion].extension ^slicing.rules = #open
+* qualification[profesion].extension contains matriculaHabilitada named MatriculaHabilitada 1..1
+* qualification[profesion].extension contains jurisdMatricula named JurisdMatricula 1..1
+* qualification[profesion].identifier 1..1
+//* qualification[profesion].identifier.use = http://hl7.org/fhir/identifier-use#official
+* qualification[profesion].identifier.type.text = "Matrícula Profesional" (exactly)
+* qualification[profesion].identifier.type = #JHN
+* qualification[profesion].identifier.system 1..1 
+* qualification[profesion].identifier.system ^short = "Es un numero conformado por tipoProfesional, la jurisdiccion y el colegio"
+* qualification[profesion].identifier.value 1..1
+//* qualification[profesion].issuer.identifier.system = "https://sisa.msal.gov.ar/REFEPS/profesiones" //Valor fijo de la URI del valueset
+* qualification[profesion].code from ProfesionesVS
+* qualification[profesion].code.coding 1..1
+* qualification[profesion].code.coding ^short = "Código de profesion REFEPS"
+//Hacer un slicing de code para representar las N especialidades
+* qualification[profesion].code.coding ^definition = "Código de profesion en REFEPS, por ejemplo 1=Médico"
+* qualification[profesion].code.coding.system = Canonical(profesionesREFEPSCS)
+// * qualification[profesion].period.extension ^slicing.discriminator[0].type = #value
+// * qualification[profesion].period.extension ^slicing.discriminator[0].path = "url"
+// * qualification[profesion].period.extension ^slicing.rules = #open
+* qualification[profesion].period.extension contains fechaModificacionMatricula named FechaModificacionMatricula 0..1
+* qualification[profesion].period.start 1..1
+//* qualification[profesion].issuer only Reference(datosMatriculador)
+//Jurisdiccion en extension ad hoc
+* qualification[profesion].issuer 1..1
+* qualification[profesion].issuer.identifier 1..1
+* qualification[profesion].issuer.identifier.system 1..1
+* qualification[profesion].issuer.identifier.value 1..1
+* qualification[profesion].issuer.identifier.system = "https://sisa.msal.gov.ar/REFES"
+* qualification[profesion].issuer.display 1..1
+
+//slicing Especialidad
+* qualification contains especialidad 0..*
+* qualification[especialidad].identifier.type.text = "ESP" (exactly)
+* qualification[especialidad].identifier.use = http://hl7.org/fhir/identifier-use#official
+* qualification[especialidad].identifier.assigner.identifier.system = "http://fhir.msal.gov.ar/entidadesCertificantesREFEPS" (exactly)
+* qualification[especialidad].code from EspecialidadesVS
+* qualification[especialidad].code.coding 1..1
+* qualification[especialidad].code.coding ^short = "Código de especialidad REFEPS"
+* qualification[especialidad].code.coding ^definition = "Código de especialidad en REFEPS, por ejemplo 1=Clínica Médica"
+* qualification[especialidad].code.coding.system = Canonical(especialidadesREFEPSCS)
