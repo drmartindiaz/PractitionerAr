@@ -3,6 +3,8 @@ Alias: $profesionesREFEPSCS = http://fhir.msal.gob.ar/CodeSystem/profesionesREFE
 Instance: Profesional7
 InstanceOf: Practitioner
 Usage: #example
+Title: "Profesional Argentino 7"
+Description: "Profesional Argentino 7"
 * meta.profile = "http://fhir.msal.gob.ar/StructureDefinition/profesional-argentino"
 * identifier[0].use = #official
 * identifier[=].system = "https://sisa.msal.gov.ar/REFEPS"
