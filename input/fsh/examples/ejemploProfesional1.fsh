@@ -1,7 +1,7 @@
 Instance: Profesional1
 InstanceOf: PractitionerAr
 Usage: #example
-Title: "Profesional Argentino con una profesion"
+Title: "Profesional Argentino 1"
 Description: "Ejemplo de profesional argentino con una sola profesion en REFEPS"
 
 * meta.profile = "http://fhir.msal.gob.ar/StructureDefinition/profesional-argentino"
@@ -19,10 +19,10 @@ Description: "Ejemplo de profesional argentino con una sola profesion en REFEPS"
 //* qualification[profesion].extension.id = "MatriculaHabilitada" // url = "urn:uuid:172c6f50-28de-4224-b950-a764396d4a78"
 * qualification[profesion].extension[=].valueBoolean = true
 * qualification[profesion].extension[+].url = "http://fhir.msal.gob.ar/StructureDefinition/jurisdMatricula"
-* qualification[profesion].extension[=].valueCodeableConcept = #2 "Buenos Aires"
+* qualification[profesion].extension[=].valueCodeableConcept = ProvinciasCS#2 "Buenos Aires"
 * qualification[profesion].identifier.system = "https://sisa.msal.gov.ar/REFEPS/15-2-10006441714000"
 * qualification[profesion].identifier.value = "119217"
-* qualification[profesion].code = #15 "Enfermero"
+* qualification[profesion].code = ProfesionesCS#15 "Enfermero"
 * qualification[profesion].period.start = "2014-10-06T00:00:00+00:00"
 * qualification[profesion].issuer.identifier.system = "https://sisa.msal.gov.ar/REFES"
 * qualification[profesion].issuer.identifier.value = #10006441714000

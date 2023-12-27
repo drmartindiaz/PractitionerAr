@@ -9,6 +9,8 @@ CodeSystem: ProfesionesCS
 Id: profesionesREFEPSCS
 Title: "Prefesiones de referencia definidas en REFEPS"
 Description:  "Listado de profesiones de referencia para REFEPS"
+* ^experimental = true
+* ^caseSensitive = false
 * insert RuleSetMeta
 * #1 "Psicólogo"
 * #2 "Psicopedagogo"
@@ -136,6 +138,8 @@ CodeSystem: ProvinciasCS
 Id: ProvinciasCS
 Title: "Listado de provincias"
 Description: "Listado de provincias para REFEPS"
+* ^experimental = true
+* ^caseSensitive = false
 * insert RuleSetMeta
 * #1 "CABA"
 * #2 "Buenos Aires"
@@ -179,6 +183,8 @@ CodeSystem: EntidadesCertificantesCS
 Id: entidadesCertificantesCS
 Title: "Entidades certificantes de matriculas para REFEPS Codesystem"
 Description:  "Listado de Entidades certificantes de matriculas para REFEPS Codesystem"
+* ^experimental = true
+* ^caseSensitive = false
 * insert RuleSetMeta
 * #10006441714000 "MINISTERIO DE SALUD DE BUENOS AIRES"
 * #10002001710001 "MINISTERIO DE SALUD DE LA CIUDAD DE BUENOS AIRES"
@@ -266,7 +272,7 @@ Description:  "Listado de Entidades certificantes de matriculas para REFEPS Code
 * #75064132116480 "Colegio de PSICOLOGOS DISTRITO III, de JUNÍN"
 * #75066232116481 "Colegio de PSICOLOGOS DISTRITO IV, de PERGAMINO"
 * #75065812116486 "Colegio de PSICOLOGOS DISTRITO IX, de NECOCHEA"
-* #75068822116482 "Colegio de PSICOLOGOS DISTRITO V, de ZÁRATE "
+* #75068822116482 "Colegio de PSICOLOGOS DISTRITO V, de ZÁRATE"
 * #75064972116483 "Colegio de PSICOLOGOS DISTRITO VI, de LUJÁN"
 * #75062242116484 "Colegio de PSICOLOGOS DISTRITO VII, de CHIVILCOY"
 * #75060492116485 "Colegio de PSICOLOGOS DISTRITO VIII, de AZUL"
@@ -300,7 +306,7 @@ Description:  "Listado de Entidades certificantes de matriculas para REFEPS Code
 * #75063712116582 "Colegio de TRABAJADORES SOCIALES - SAN MARTIN, de GENERAL SAN MARTÍN"
 * #75067632116583 "Colegio de TRABAJADORES SOCIALES - SAN NICOLAS, de SAN NICOLÁS"
 * #75068262116584 "Colegio de TRABAJADORES SOCIALES - TRENQUE LAUQUEN, de TRENQUE LAUQUEN"
-* #75068822116585 "Colegio de TRABAJADORES SOCIALES - ZARATE - CAMPANA, de ZÁRATE "
+* #75068822116585 "Colegio de TRABAJADORES SOCIALES - ZARATE - CAMPANA, de ZÁRATE"
 * #75100002124679 "Colegio de ASISTENTES SOCIALES, de Catamarca"
 * #75100492124617 "Colegio de BIOQUIMICOS, de Catamarca"
 * #75100002124684 "COLEGIO MATRICULACION de LICENCIADO ENFERMERÍA de la Provincia de Catamarca"
@@ -367,7 +373,7 @@ Description:  "Listado de Entidades certificantes de matriculas para REFEPS Code
 * #75420002154040 "Colegio de MÉDICOS, de La Pampa"
 * #75420002154036 "Colegio de NUTRICIONISTAS, de La Pampa"
 * #75460002155489 "Colegio de ASISTENTES SOCIALES, de La Rioja"
-* #75460142355627 " COLEGIO PROFESIONAL DE ENFERMERIA, de La Rioja"
+* #75460142355627 "COLEGIO PROFESIONAL DE ENFERMERIA, de La Rioja"
 * #75460002155493 "Colegio de FARMACÉUTICOS, de La Rioja"
 * #75460002155490 "Colegio de KINESIÓLOGOS, de La Rioja"
 * #75460002155487 "Colegio de LICENCIADOS EN DIAGNÓSTICO POR IMÁGENES, de La Rioja"
@@ -469,6 +475,8 @@ CodeSystem: EspecialidadesCS
 Id: especialidadesREFEPSCS
 Title: "Especialidades definidas en REFEPS"
 Description:  "Listado de especialidades para REFEPS"
+* ^experimental = true
+* ^caseSensitive = false
 * insert RuleSetMeta
 //* ^url = "http://fhir.msal.gob.ar/CodeSystem/especialidadesREFEPS"
 * #1 "Clínica Médica"
