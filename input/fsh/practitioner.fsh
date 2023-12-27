@@ -84,6 +84,7 @@ Description: "Profesional para la Red de Salud Digital de la República Argentin
 * qualification[profesion].period.start 1..1
 //* qualification[profesion].issuer only Reference(datosMatriculador)
 //Jurisdiccion en extension ad hoc
+// Entidad que valida pofesion en REFES:
 * qualification[profesion].issuer 1..1
 * qualification[profesion].issuer.identifier 1..1
 * qualification[profesion].issuer.identifier.system 1..1

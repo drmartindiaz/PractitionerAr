@@ -1,38 +1,38 @@
 Alias: $profesionesREFEPSCS = http://fhir.msal.gob.ar/CodeSystem/profesionesREFEPSCS
 
-Instance: Profesional7
-InstanceOf: Practitioner
+Instance: Profesional5
+InstanceOf: PractitionerAr
 Usage: #example
-Title: "Profesional Argentino 7"
-Description: "Profesional Argentino 7"
+Title: "Profesional Argentino 5"
+Description: "Profesional Argentino 5"
 * meta.profile = "http://fhir.msal.gob.ar/StructureDefinition/profesional-argentino"
 * identifier[0].use = #official
 * identifier[=].system = "https://sisa.msal.gov.ar/REFEPS"
-* identifier[=].value = "541002420612"
+* identifier[=].value = "541010003003"
 * identifier[+].use = #secondary
 * identifier[=].system = "http://www.renaper.gob.ar/dni"
-* identifier[=].value = "2420612"
+* identifier[=].value = "10003003"
 * active = true
-* name.text = "Tovar, Olimpo"
+* name.text = "Irizarry, Ona"
 * gender = #female
-* birthDate = "1933-12-24"
+* birthDate = "1951-04-23"
 * qualification[0].extension[0].url = "http://fhir.msal.gob.ar/StructureDefinition/MatriculaHabilitada"
 * qualification[=].extension[=].valueBoolean = true
 * qualification[=].extension[+].url = "http://fhir.msal.gob.ar/StructureDefinition/jurisdMatricula"
-* qualification[=].extension[=].valueCodeableConcept = ProvinciasCS#4 "Chaco"
-* qualification[=].identifier.system = "https://sisa.msal.gov.ar/REFEPS/15-4-null"
-* qualification[=].identifier.value = "2258"
+* qualification[=].extension[=].valueCodeableConcept = ProvinciasCS#9 "Formosa"
+* qualification[=].identifier.system = "https://sisa.msal.gov.ar/REFEPS/15-9-null"
+* qualification[=].identifier.value = "94"
 * qualification[=].code = ProfesionesCS#15 "Enfermero"
-* qualification[=].period.start = "1986-09-12T00:00:00-03:00"
+* qualification[=].period.start = "2010-03-08T12:00:00-03:00"
 * qualification[=].issuer.identifier.system = "https://sisa.msal.gov.ar/REFES"
 * qualification[=].issuer.identifier.value = "0"
 * qualification[+].extension[0].url = "http://fhir.msal.gob.ar/StructureDefinition/MatriculaHabilitada"
 * qualification[=].extension[=].valueBoolean = true
 * qualification[=].extension[+].url = "http://fhir.msal.gob.ar/StructureDefinition/jurisdMatricula"
-* qualification[=].extension[=].valueCodeableConcept = ProvinciasCS#4 "Chaco"
-* qualification[=].identifier.system = "https://sisa.msal.gov.ar/REFEPS/32-4-null"
-* qualification[=].identifier.value = "292"
-* qualification[=].code = ProfesionesCS#32 "Auxiliar en enfermería"
-* qualification[=].period.start = "1970-09-21T00:00:00-03:00"
+* qualification[=].extension[=].valueCodeableConcept = ProvinciasCS#9 "Formosa"
+* qualification[=].identifier.system = "https://sisa.msal.gov.ar/REFEPS/37-9-null"
+* qualification[=].identifier.value = "94"
+* qualification[=].code = ProfesionesCS#37 "Licenciado en enfermería"
+* qualification[=].period.start = "2010-03-08T00:00:00-03:00"
 * qualification[=].issuer.identifier.system = "https://sisa.msal.gov.ar/REFES"
 * qualification[=].issuer.identifier.value = "0"

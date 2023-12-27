@@ -1,7 +1,7 @@
 Alias: $profesionesREFEPSCS = http://fhir.msal.gob.ar/CodeSystem/profesionesREFEPSCS
 
 Instance: Profesional4
-InstanceOf: Practitioner
+InstanceOf: PractitionerAr
 Usage: #example
 Title: "Profesional Argentino 4"
 Description: "Profesional Argentino 4"
