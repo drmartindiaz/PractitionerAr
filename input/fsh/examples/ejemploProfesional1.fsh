@@ -24,7 +24,7 @@ Description: "Ejemplo de profesional argentino con una sola profesion en REFEPS"
 * qualification[profesion].identifier.value = "119217"
 * qualification[profesion].code = ProfesionesCS#15 "Enfermero"
 * qualification[profesion].period.start = "2014-10-06T00:00:00+00:00"
-* qualification[profesion].issuer.identifier.system = "https://sisa.msal.gov.ar/REFES"
+* qualification[profesion].issuer.identifier.system = Canonical(entidadesMatriculantesCS)
 * qualification[profesion].issuer.identifier.value = #10006441714000
 * qualification[profesion].issuer.display = "MINISTERIO DE SALUD DE BUENOS AIRES"
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>DNI:30736087 LSF:541030736087 Nombre y Apellido: Capuleto, Julieta</div>"

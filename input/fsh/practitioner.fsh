@@ -16,10 +16,7 @@ Description: "Profesional para la Red de Salud Digital de la República Argentin
 * identifier[DNI].use = http://hl7.org/fhir/identifier-use#secondary (exactly)
 * identifier[DNI].system = "http://www.renaper.gob.ar/dni" (exactly)
 * identifier[DNI].system ^short = "RENAPER"
-//* identifier[DNI].system ^definition = "Registro Nacional de las Personas de Argentina"
 * identifier[DNI].value 1..1 
-//* identifier[DNI].assigner.display 1..1
-//* identifier[DNI].assigner.display = "RENAPER" (exactly)
 * identifier[DNI].type = IDType#NI 
 
 //Licencia Sanitaria Federal (LSF)
@@ -29,26 +26,14 @@ Description: "Profesional para la Red de Salud Digital de la República Argentin
 * identifier[LSF].system 1..1
 * identifier[LSF].type = IDType#MD
 * identifier[LSF].value 1..1 
-//* identifier[LSF].period.start 1..1 //Es por matricula 
 
 * active 1..1
 * name 1..1
 * name ^label = "Nombre y Apellido"
-// * name ^slicing.discriminator.type = #value
-// * name ^slicing.discriminator.path = "type.coding.code"
-// * name ^slicing.rules = #open
-// * name contains official 0..1 MS
 * name.use = http://hl7.org/fhir/identifier-use#official
-// * name.family.extension contains  
-//     ApellidoPaterno named fathers           0..1 and
-//     ApellidoMaterno named mothers           0..1   
-//* name.prefix 0..0
-//* name.suffix 0..0
-
-//* gender from http://hl7.org/fhir/ValueSet/administrative-gender  
 * gender                0..1 MS
 * birthDate             0..1 MS
-//* photo                 0..*
+
 
 * qualification 1..*
 //slicing de qualification
@@ -58,38 +43,38 @@ Description: "Profesional para la Red de Salud Digital de la República Argentin
 
 //profesion
 * qualification contains profesion 1..*
-// * qualification[profesion].extension ^slicing.discriminator[0].type = #value
-// * qualification[profesion].extension ^slicing.discriminator[0].path = "url"
-// * qualification[profesion].extension ^slicing.rules = #open
-* qualification[profesion].extension contains matriculaHabilitada named MatriculaHabilitada 1..1
-* qualification[profesion].extension contains jurisdMatricula named JurisdMatricula 1..1
-* qualification[profesion].identifier 1..1
-//* qualification[profesion].identifier.use = http://hl7.org/fhir/identifier-use#official
+* qualification[profesion].code from ProfesionesVS
+* qualification[profesion].code.coding 1..1
+* qualification[profesion].code.coding ^short = "Código de profesion REFEPS"
+* qualification[profesion].code.coding ^definition = "Código de profesion en REFEPS, por ejemplo 1=Médico"
+* qualification[profesion].code.coding.system = Canonical(profesionesREFEPSCS)
+// Matrícula profesional
+* qualification[profesion].identifier 0..1 //Porque puede no tener matrícula
 * qualification[profesion].identifier.type.text = "Matrícula Profesional" (exactly)
 * qualification[profesion].identifier.type = #JHN
 * qualification[profesion].identifier.system 1..1 
 * qualification[profesion].identifier.system ^short = "Es un numero conformado por tipoProfesional, la jurisdiccion y el colegio"
-* qualification[profesion].identifier.value 1..1
+* qualification[profesion].identifier.value 1..1 
+* qualification[profesion].identifier.value ^short = "Es el número de matrícula propiamente dicho"
+// puede no tener matricula, deberiamos validar si no la tiene no pedir todo lo referente a la matricula
+* qualification[profesion].extension contains matriculaHabilitada named MatriculaHabilitada 0..1 MS
+* qualification[profesion].extension contains jurisdMatricula named JurisdMatricula 0..1 MS
+
 //* qualification[profesion].issuer.identifier.system = "https://sisa.msal.gov.ar/REFEPS/profesiones" //Valor fijo de la URI del valueset
-* qualification[profesion].code from ProfesionesVS
-* qualification[profesion].code.coding 1..1
-* qualification[profesion].code.coding ^short = "Código de profesion REFEPS"
-//Hacer un slicing de code para representar las N especialidades
-* qualification[profesion].code.coding ^definition = "Código de profesion en REFEPS, por ejemplo 1=Médico"
-* qualification[profesion].code.coding.system = Canonical(profesionesREFEPSCS)
 // * qualification[profesion].period.extension ^slicing.discriminator[0].type = #value
 // * qualification[profesion].period.extension ^slicing.discriminator[0].path = "url"
 // * qualification[profesion].period.extension ^slicing.rules = #open
-* qualification[profesion].period.extension contains fechaModificacionMatricula named FechaModificacionMatricula 0..1
+// * qualification[profesion].period.extension contains fechaModificacionMatricula named FechaModificacionMatricula 0..1 //USamos Period.end
 * qualification[profesion].period.start 1..1
+* qualification[profesion].period.end 0..1 MS
+* qualification[profesion].period.end ^short = "Si se inhabilita la matricula (MatriculaHabilitada = False), este dato debe existir"
 //* qualification[profesion].issuer only Reference(datosMatriculador)
-//Jurisdiccion en extension ad hoc
-// Entidad que valida pofesion en REFES:
+// Entidad que valida pofesion:
 * qualification[profesion].issuer 1..1
 * qualification[profesion].issuer.identifier 1..1
 * qualification[profesion].issuer.identifier.system 1..1
 * qualification[profesion].issuer.identifier.value 1..1
-* qualification[profesion].issuer.identifier.system = "https://sisa.msal.gov.ar/REFES"
+* qualification[profesion].issuer.identifier.system = Canonical(entidadesMatriculantesCS)
 * qualification[profesion].issuer.display 1..1
 
 //slicing Especialidad

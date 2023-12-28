@@ -166,12 +166,12 @@ Description: "Listado de provincias para REFEPS"
 * #23 "Tierra del Fuego"
 * #24 "Tucumán"
 
-ValueSet: EntidadesCertificantesVS
-Id: entidadesCertificantesVS
-Title: "Entidades certificantes de matriculas para REFEPS"
-Description:  "Listado de Entidades certificantes de matriculas para REFEPS"
+/*ValueSet: EntidadesMatriculantesVS
+Id: entidadesMatriculantesVS
+Title: "Entidades Matriculantes de matriculas para REFEPS"
+Description:  "Listado de Entidades Matriculantes de matriculas para REFEPS"
 * insert RuleSetMeta
-* codes from system EntidadesCertificantesCS  
+* codes from system EntidadesMatriculantesCS  */
 
 // ValueSet:  EtniasValueSet
 // Id: etnias-argentinas-value-set
@@ -179,10 +179,10 @@ Description:  "Listado de Entidades certificantes de matriculas para REFEPS"
 // Description:  "Codigo que describe las etnias argentinas desde la edición argentina de SNOMED-CT."
 // * codes from system SCTAr where concept is-a #372148003 
 
-CodeSystem: EntidadesCertificantesCS
-Id: entidadesCertificantesCS
-Title: "Entidades certificantes de matriculas para REFEPS Codesystem"
-Description:  "Listado de Entidades certificantes de matriculas para REFEPS Codesystem"
+CodeSystem: EntidadesMatriculantesCS
+Id: entidadesMatriculantesCS
+Title: "Entidades Matriculantes de matriculas para REFEPS Codesystem"
+Description:  "Listado de Entidades Matriculantes de matriculas para REFEPS Codesystem"
 * ^experimental = true
 * ^caseSensitive = false
 * insert RuleSetMeta
