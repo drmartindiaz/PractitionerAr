@@ -80,12 +80,5 @@ Description: "Profesional para la Red de Salud Digital de la República Argentin
 * qualification[especialidad].code.coding ^definition = "Código de especialidad en REFEPS, por ejemplo 1=Clínica Médica"
 * qualification[especialidad].code.coding.system = Canonical(especialidadesREFEPSCS)
 // Especialidad
-* qualification[especialidad].identifier.type.text = "Especialidad" (exactly)
-* qualification[especialidad].identifier.use = http://hl7.org/fhir/identifier-use#official
 //* qualification[especialidad].identifier.assigner.identifier.system = "http://fhir.msal.gov.ar/entidadesCertificantesREFEPS" (exactly)
-* qualification[especialidad].issuer 1..1
-* qualification[especialidad].issuer.identifier 1..1
-* qualification[especialidad].issuer.identifier.system 1..1
-* qualification[especialidad].issuer.identifier.value 1..1
-* qualification[especialidad].issuer.identifier.system = Canonical(entidadesCertificantesCS)
-* qualification[especialidad].issuer.display 1..1
+

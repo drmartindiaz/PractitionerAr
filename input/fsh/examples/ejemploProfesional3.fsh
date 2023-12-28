@@ -72,7 +72,6 @@ Description: "Ejemplo de profesional argentino con una sola profesion en REFEPS"
 * qualification[=].issuer.identifier.system = Canonical(entidadesMatriculantesCS)
 * qualification[=].issuer.identifier.value = "75060492115004"
 * qualification[=].issuer.display = "75060492115004"
-* qualification[+].identifier.use = #official
-* qualification[=].identifier.type.text = "ESP"
-* qualification[=].identifier.assigner.display = "5"
+* qualification[=].code.coding.system = Canonical(especialidadesREFEPSCS)
+* qualification[=].code.coding.code = #34
 * qualification[=].code.coding.display = "Ortopedia y Traumatología"

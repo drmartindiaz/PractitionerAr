@@ -654,11 +654,3 @@ Description:  "Listado de especialidades para REFEPS"
 * #185 "Derecho y Salud (R)"
 * #186 "Arquitectura (R)"
 * #187 "Economía y Administración Hospitalaria (R)"
-
-CodeSystem: EntidadesCertificantesCS
-Id: entidadesCertificantesCS
-Title: "Entidades Certificantes CodeSystem"
-Description: "Entidades que certifican especaildaides de diferentes profesiones"
-* ^experimental = false
-* ^caseSensitive = false
-* insert RuleSetMeta
