@@ -9,7 +9,7 @@ CodeSystem: ProfesionesCS
 Id: profesionesREFEPSCS
 Title: "Prefesiones de referencia definidas en REFEPS"
 Description:  "Listado de profesiones de referencia para REFEPS"
-* ^experimental = true
+* ^experimental = false
 * ^caseSensitive = false
 * insert RuleSetMeta
 * #1 "Psicólogo"
@@ -138,7 +138,7 @@ CodeSystem: ProvinciasCS
 Id: ProvinciasCS
 Title: "Listado de provincias"
 Description: "Listado de provincias para REFEPS"
-* ^experimental = true
+* ^experimental = false
 * ^caseSensitive = false
 * insert RuleSetMeta
 * #1 "CABA"
@@ -183,7 +183,7 @@ CodeSystem: EntidadesMatriculantesCS
 Id: entidadesMatriculantesCS
 Title: "Entidades Matriculantes de matriculas para REFEPS Codesystem"
 Description:  "Listado de Entidades Matriculantes de matriculas para REFEPS Codesystem"
-* ^experimental = true
+* ^experimental = false
 * ^caseSensitive = false
 * insert RuleSetMeta
 * #10006441714000 "MINISTERIO DE SALUD DE BUENOS AIRES"
@@ -475,7 +475,7 @@ CodeSystem: EspecialidadesCS
 Id: especialidadesREFEPSCS
 Title: "Especialidades definidas en REFEPS"
 Description:  "Listado de especialidades para REFEPS"
-* ^experimental = true
+* ^experimental = false
 * ^caseSensitive = false
 * insert RuleSetMeta
 //* ^url = "http://fhir.msal.gob.ar/CodeSystem/especialidadesREFEPS"
