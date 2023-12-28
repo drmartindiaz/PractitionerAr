@@ -3,6 +3,7 @@ Id: profesionesREFEPSVS
 Title: "Profesiones posibles para profesional en Argentina"
 Description:  "Listado de profesioens utilizadas en REFEPS"
 * insert RuleSetMeta
+* ^experimental = false
 * codes from system ProfesionesCS 
 
 CodeSystem: ProfesionesCS
@@ -131,6 +132,7 @@ ValueSet: ProvinciasVS
 Id: ProvinciasVS
 Title: "Conjunto de valores válidos de provincias"
 Description:  "Conjunto de valores válidos de provincias"
+* ^experimental = false
 * insert RuleSetMeta
 * codes from system ProvinciasCS
 
@@ -468,6 +470,7 @@ ValueSet:  EspecialidadesVS
 Id: especialidadesREFEPSVS
 Title: "Especialidades posibles para profesional en Argentina"
 Description:  "Listado de especialidades utilizadas en REFEPS"
+* ^experimental = false
 * insert RuleSetMeta
 * codes from system EspecialidadesCS
 
@@ -651,3 +654,11 @@ Description:  "Listado de especialidades para REFEPS"
 * #185 "Derecho y Salud (R)"
 * #186 "Arquitectura (R)"
 * #187 "Economía y Administración Hospitalaria (R)"
+
+CodeSystem: EntidadesCertificantesCS
+Id: entidadesCertificantesCS
+Title: "Entidades Certificantes CodeSystem"
+Description: "Entidades que certifican especaildaides de diferentes profesiones"
+* ^experimental = false
+* ^caseSensitive = false
+* insert RuleSetMeta

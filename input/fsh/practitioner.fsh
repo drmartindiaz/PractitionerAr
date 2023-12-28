@@ -51,7 +51,8 @@ Description: "Profesional para la Red de Salud Digital de la República Argentin
 // Matrícula profesional
 * qualification[profesion].identifier 0..1 //Porque puede no tener matrícula
 * qualification[profesion].identifier.type.text = "Matrícula Profesional" (exactly)
-* qualification[profesion].identifier.type = #JHN
+* qualification[profesion].identifier.type.coding.system = "http://hl7.org/fhir/ValueSet/identifier-type"
+* qualification[profesion].identifier.type.coding.code = #JHN
 * qualification[profesion].identifier.system 1..1 
 * qualification[profesion].identifier.system ^short = "Es un numero conformado por tipoProfesional, la jurisdiccion y el colegio"
 * qualification[profesion].identifier.value 1..1 
@@ -60,15 +61,9 @@ Description: "Profesional para la Red de Salud Digital de la República Argentin
 * qualification[profesion].extension contains matriculaHabilitada named MatriculaHabilitada 0..1 MS
 * qualification[profesion].extension contains jurisdMatricula named JurisdMatricula 0..1 MS
 
-//* qualification[profesion].issuer.identifier.system = "https://sisa.msal.gov.ar/REFEPS/profesiones" //Valor fijo de la URI del valueset
-// * qualification[profesion].period.extension ^slicing.discriminator[0].type = #value
-// * qualification[profesion].period.extension ^slicing.discriminator[0].path = "url"
-// * qualification[profesion].period.extension ^slicing.rules = #open
-// * qualification[profesion].period.extension contains fechaModificacionMatricula named FechaModificacionMatricula 0..1 //USamos Period.end
 * qualification[profesion].period.start 1..1
 * qualification[profesion].period.end 0..1 MS
 * qualification[profesion].period.end ^short = "Si se inhabilita la matricula (MatriculaHabilitada = False), este dato debe existir"
-//* qualification[profesion].issuer only Reference(datosMatriculador)
 // Entidad que valida pofesion:
 * qualification[profesion].issuer 1..1
 * qualification[profesion].issuer.identifier 1..1
@@ -79,11 +74,18 @@ Description: "Profesional para la Red de Salud Digital de la República Argentin
 
 //slicing Especialidad
 * qualification contains especialidad 0..*
-* qualification[especialidad].identifier.type.text = "ESP" (exactly)
-* qualification[especialidad].identifier.use = http://hl7.org/fhir/identifier-use#official
-* qualification[especialidad].identifier.assigner.identifier.system = "http://fhir.msal.gov.ar/entidadesCertificantesREFEPS" (exactly)
 * qualification[especialidad].code from EspecialidadesVS
 * qualification[especialidad].code.coding 1..1
 * qualification[especialidad].code.coding ^short = "Código de especialidad REFEPS"
 * qualification[especialidad].code.coding ^definition = "Código de especialidad en REFEPS, por ejemplo 1=Clínica Médica"
 * qualification[especialidad].code.coding.system = Canonical(especialidadesREFEPSCS)
+// Especialidad
+* qualification[especialidad].identifier.type.text = "Especialidad" (exactly)
+* qualification[especialidad].identifier.use = http://hl7.org/fhir/identifier-use#official
+//* qualification[especialidad].identifier.assigner.identifier.system = "http://fhir.msal.gov.ar/entidadesCertificantesREFEPS" (exactly)
+* qualification[especialidad].issuer 1..1
+* qualification[especialidad].issuer.identifier 1..1
+* qualification[especialidad].issuer.identifier.system 1..1
+* qualification[especialidad].issuer.identifier.value 1..1
+* qualification[especialidad].issuer.identifier.system = Canonical(entidadesCertificantesCS)
+* qualification[especialidad].issuer.display 1..1

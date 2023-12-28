@@ -4,7 +4,7 @@ Id: ProfesionalLM
 Title: "Profesional de la Salud"
 Description: "Profesional actuante en un episodio sanitario registrado en REFEPS"
 //* insert RuleSetMeta
-* DocumentoIdentidad 1..1 Identifier "Documento Nacional de Identidad del profesional"
+* DocIdentidad 1..1 Identifier "Documento Nacional de Identidad del profesional"
 * REFEPSId 1..1 Identifier "Identificador de REFEPS aka LSF"
 * Activo 1..1 boolean "El REFEPS resuelve si esta activo o no este profesional"
 * NombreYApellido 1..1 HumanName "Nombres y Apellidos oficiales del docuemnto de identidad"
@@ -21,4 +21,4 @@ Description: "Profesional actuante en un episodio sanitario registrado en REFEPS
   * Especialidad 0..* BackboneElement "Especialidades asociadas a la profesión"
     * Nombre 1..1 string "Descripcion de la especialidad"
     * Codigo 1..1 CodeableConcept "Código RFEPS de especialidad"
-    * EntidadeCertificante 1..1 CodeableConcept "Código de la entidad que certifica la especialidad" 
+    * EntidadCertificante 1..1 CodeableConcept "Código de la entidad que certifica la especialidad" 
