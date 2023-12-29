@@ -34,6 +34,8 @@ Extension: MatriculaHabilitada
 Id: matriculaHabilitada
 Title: "Estado de habilitacion de la matricula profesional en una jurisdccion"
 Description: "Matricula Habilitada o No"
+* ^context.type = #element
+* ^context.expression = "Practitioner.qualification"
 * value[x] only boolean
 
 /*Extension: FechaModificacionMatricula
@@ -46,5 +48,7 @@ Extension: JurisdMatricula
 Id: jurisdMatricula
 Title: "Jurisdicción de la Matricula"
 Description: "Jurisdicción de la matrícula del profesional"
+* ^context.type = #element
+* ^context.expression = "Practitioner.qualification"
 * value[x] only CodeableConcept 
 * valueCodeableConcept from ProvinciasVS 
