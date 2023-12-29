@@ -27,5 +27,6 @@ Description: "Ejemplo de profesional argentino con una sola profesion en REFEPS"
 * qualification[profesion].issuer.identifier.system = Canonical(entidadesMatriculantesCS)
 * qualification[profesion].issuer.identifier.value = #10006441714000
 * qualification[profesion].issuer.display = "MINISTERIO DE SALUD DE BUENOS AIRES"
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>DNI:30736087 LSF:541030736087 Nombre y Apellido: Capuleto, Julieta</div>"
-* text.status = #generated
+//* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'>DNI:30736087 LSF:541030736087 Nombre y Apellido: Capuleto, Julieta</div>"
+//* text.status = #generated
+// Comento text, queda la narrativa generada por IG publisher
