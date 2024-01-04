@@ -1,14 +1,14 @@
 ValueSet:  ProfesionesVS
 Id: profesionesREFEPSVS
 Title: "Profesiones posibles para profesional en Argentina"
-Description:  "Listado de profesioens utilizadas en REFEPS"
+Description:  "Listado de profesiones utilizadas en REFEPS"
 * insert RuleSetMeta
 * ^experimental = false
 * codes from system ProfesionesCS 
 
 CodeSystem: ProfesionesCS
 Id: profesionesREFEPSCS
-Title: "Prefesiones de referencia definidas en REFEPS"
+Title: "Profesiones de referencia definidas en REFEPS"
 Description:  "Listado de profesiones de referencia para REFEPS"
 * ^experimental = false
 * ^caseSensitive = false

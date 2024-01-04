@@ -32,8 +32,8 @@ Description: "Apellido de la madre de paciente"
 
 Extension: MatriculaHabilitada
 Id: matriculaHabilitada
-Title: "Estado de habilitacion de la matricula profesional en una jurisdccion"
-Description: "Matricula Habilitada o No"
+Title: "Matricula habilitada"
+Description: "Estado de habilitación de la matrícula en la jurisdicción. true = habilitada, false = no habilitada"
 * ^context.type = #element
 * ^context.expression = "Practitioner.qualification"
 * value[x] only boolean
@@ -51,4 +51,4 @@ Description: "Jurisdicción de la matrícula del profesional"
 * ^context.type = #element
 * ^context.expression = "Practitioner.qualification"
 * value[x] only CodeableConcept 
-* valueCodeableConcept from ProvinciasVS 
+* valueCodeableConcept from ProvinciasVS

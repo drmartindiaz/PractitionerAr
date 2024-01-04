@@ -2,7 +2,7 @@ Instance: Profesional1
 InstanceOf: PractitionerAr
 Usage: #example
 Title: "Profesional Argentino 1"
-Description: "Ejemplo de profesional argentino con una sola profesion en REFEPS"
+Description: "Ejemplo de profesional argentino con una sola profesion REFEPS (profesión matriculada)"
 
 * meta.profile = "http://fhir.msal.gob.ar/StructureDefinition/profesional-argentino"
 * identifier[DNI].use = #secondary
