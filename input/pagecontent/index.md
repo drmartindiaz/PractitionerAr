@@ -18,3 +18,15 @@ Esta guía contiene especificaciones técnicas y está dirigida principalemente 
 ### Requerimientos de conformidad
 
 Los requerimientos de conformidad describen las expectativas sobre la funcionalidad de las aplicaciones servidor/cliente, identificando los perfiles específicos y las interacciones que deben implementar. Los perfiles individuales identifican los requerimientos estructurales y terminológicos. Las definiciones de parámetros de búsqueda y operaciones especifican cómo son implementados por los servidores.
+
+### Dependencias
+{% include dependency-table.xhtml %}
+
+### Análisis de versiones cruzadas
+{% include cross-version-analysis.xhtml %}
+
+### Perfiles globales
+{% include globals-table.xhtml %}
+
+### Declaración de propiedad intelectual
+{% include ip-statements.xhtml %}

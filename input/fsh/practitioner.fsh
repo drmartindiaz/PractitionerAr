@@ -66,8 +66,9 @@ Description: "Profesional para la Red de Salud Digital de la República Argentin
 * qualification[profesion].extension contains jurisdMatricula named JurisdMatricula 0..1 MS
 
 * qualification[profesion].period.start 1..1
+* qualification[profesion].period.start ^short = "Es la fecha en la cual la matricula se dió de alta para esta jurisdiccón y profesión"
 * qualification[profesion].period.end 0..1 MS
-* qualification[profesion].period.end ^short = "Si se inhabilita la matricula (MatriculaHabilitada = False), este dato debe existir"
+* qualification[profesion].period.end ^short = "Es la fecha en la cual la matricula se inhabilitó para esta jurisdiccón y profesión"
 // Entidad que valida pofesion:
 * qualification[profesion].issuer 0..1 //porque peude no tener matrícula
 * qualification[profesion].issuer.identifier 1..1
